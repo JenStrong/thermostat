@@ -44,4 +44,31 @@ describe ('Thermostat', function(){
     thermostat.switchPowerSavingModeOn();
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
+
+  it('can be reset to default temperature', function(){
+    for(var i = 0; i<6; i++){
+      thermostat.up();
+    }
+    thermostat.reset();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
+  describe('when power saving mode is on', function() {
+    it('limits temperature to 25', function() {
+      for(var i = 0; i<6; i++){
+        thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+  });
+
+  describe('when power saving mode is off', function(){
+    it('limits temperature to 32', function(){
+      thermostat.switchPowerSavingModeOff();
+      for(var i = 0; i<13; i++){
+        thermostat.up();
+      }
+      expect(thermostat.getCurrentTemperature()).toEqual(32)
+    });
+  });
 });
