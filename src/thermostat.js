@@ -54,3 +54,15 @@ Thermostat.prototype.switchPowerSavingModeOn = function () {
 Thermostat.prototype.reset = function () {
   this.temperature = this.DEFAULT_TEMP;
 };
+
+Thermostat.prototype.energyUsage = function () {
+  if (this.temperature < 18){
+    return 'low-usage';
+  }
+  else if (this.temperature >18 && this.temperature <25){
+    return 'medium-usage';
+  }
+  else{
+    return 'high-usage';
+  }
+};

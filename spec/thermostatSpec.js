@@ -68,7 +68,27 @@ describe ('Thermostat', function(){
       for(var i = 0; i<13; i++){
         thermostat.up();
       }
-      expect(thermostat.getCurrentTemperature()).toEqual(32)
+      expect(thermostat.getCurrentTemperature()).toEqual(32);
+    });
+  });
+
+  describe('display usage', function(){
+    it('when the temp is below 18 degrees', function(){
+      for(var i = 0; i<3; i++){
+        thermostat.down();
+      }
+      expect(thermostat.energyUsage()).toEqual('low-usage');
+    });
+
+    it('when the temp is between 18 - 25 degrees', function(){
+      expect(thermostat.energyUsage()).toEqual('medium-usage');
+    });
+
+    it('when the temp is above 25 degrees', function(){
+      for(var i = 0; i<6; i++){
+        thermostat.up();
+      }
+      expect(thermostat.energyUsage()).toEqual('high-usage');
     });
   });
 });
