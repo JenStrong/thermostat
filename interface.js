@@ -2,6 +2,10 @@ $(document).ready(function(){
   var thermostat = new Thermostat();
   updateTemperature();
 
+  $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=3c4637f8334e84b45a1b5e450fae1ab0&units=imperial', function(data) {
+  $('#current-temperature').text(data.main.temp);
+  })
+
   $('#temperature-up').on('click', function(){
     thermostat.up();
     updateTemperature();
@@ -27,7 +31,7 @@ $(document).ready(function(){
     thermostat.switchPowerSavingModeOff();
     $('#powersaving-status').text('off')
     updateTemperature();
-  })                        //why don't you put a ; here?
+  })
 
   function updateTemperature(){
     $('#temperature').text(thermostat.temperature)
