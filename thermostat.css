@@ -1,11 +1,25 @@
+body {
+  background-color: yellow;
+  background-image: url("https://bit.ly/2JOrbtv" );
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 175px;
+  font-family: 'Cabin Sketch'
+}
+
+h2 {
+  font-size: 100px;
+}
+
 .low-usage {
-  color: green;
+  color: blue;
 }
 
 .medium-usage {
-  color: black;
+  color: white;
 }
 
 .high-usage {
   color: red;
-}
