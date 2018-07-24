@@ -30,19 +30,20 @@ $ open SpecRunner.html
 ```
 
 ## Test Coverage
+[alt text](https://github.com/JenStrong/thermostat/blob/master/public/images/test_coverage.png)
 
 ## Functionalities
-The user can increase the temperature.
-The user can decrease the temperature.
-The user can reset the temperature.
-The user can turn a power saving mode on and off.
+The user can increase the temperature.<br>
+The user can decrease the temperature.<br>
+The user can reset the temperature.<br>
+The user can turn a power saving mode on and off.<br>
 
 ## Logic
-The thermostat is initialized at a default temperature of 20°C.
-The minimum temperature is 10°C.
-When power saving mode is on, the temperature can be increased to a maximum value of 25°C.
-When power saving mode is off, the temperature can be increased to a maximum value of 32°C.
-The energy usage is indicated as below:
-  low-usage: 10°C - 17°C
-  medium-usage: 18°C - 25°C
-  high-usage: 26°C - 32°C
+The thermostat is initialized at a default temperature of 20°C.<br>
+The minimum temperature is 10°C. <br>
+When power saving mode is on, the temperature can be increased to a maximum value of 25°C.<br>
+When power saving mode is off, the temperature can be increased to a maximum value of 32°C.<br>
+The energy usage is indicated as below:<br>
+  low-usage: 10°C - 17°C<br>
+  medium-usage: 18°C - 25°C<br>
+  high-usage: 26°C - 32°C<br>
