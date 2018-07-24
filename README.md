@@ -30,7 +30,7 @@ $ open SpecRunner.html
 ```
 
 ## Test Coverage
-[alt text](https://github.com/JenStrong/thermostat/blob/master/public/images/test_coverage.png)
+![alt text](https://github.com/JenStrong/thermostat/blob/master/public/images/test_coverage.png)
 
 ## Functionalities
 The user can increase the temperature.<br>
