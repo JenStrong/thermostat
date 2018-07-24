@@ -8,7 +8,7 @@ This app originally included a feature that allowed a user to enter the name of 
 Key Learning Objectives from this Project:
   1. Using Jasmine to Test-Drive Development of a thermostat
   2. Using HTML/CSS to create a user interface on the web
-  3. Using jQuery to build interactive functionality into a webpage
+  3. Using jQuery to build interactive functionality into a web page
 
 ## How it Works
 
