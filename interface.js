@@ -22,7 +22,7 @@ $(document).ready(function(){
     })
   };
 
-  $('#temperature-up').on('click', function(){
+  $('#temperature-up').click(function(){
     thermostat.up();
     updateTemperature();
   });
@@ -39,14 +39,18 @@ $(document).ready(function(){
 
   $('#powersaving-on').click(function(){
     thermostat.switchPowerSavingModeOn();
-    $('#powersaving-status').text('on')
     updateTemperature();
+    $(this).toggleClass( "selected" );
+    $('#powersaving-off').toggleClass("selected");
+    $('#powersaving-status').append('<i class="fa fa-circle"></i>')
   })
 
   $('#powersaving-off').click(function(){
     thermostat.switchPowerSavingModeOff();
-    $('#powersaving-status').text('off')
     updateTemperature();
+    $(this).toggleClass( "selected" );
+    $('#powersaving-on').toggleClass("selected");
+    $('#powersaving-status').find('i').remove();
   })
 
   function updateTemperature(){
