@@ -1,16 +1,54 @@
 body {
-  background-color: white;
-  background-image: url("https://bit.ly/2JOrbtv" );
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
   text-align: center;
   padding: 175px;
-  font-family: 'Cabin Sketch'
 }
 
-h2 {
+#screen {
+  height: 175px;
+  margin: 25px;
+  padding: 10px;
+  background-color: #9fff80;
+  border-radius: 5px;
+  border: 4px solid black;
+  position:relative;
+}
+
+#main {
+  width: 400px;
+  height: 350px;
+  border: 4px solid black;
+  background-color: white;
+}
+
+#temperature {
+  font-family: 'digitial-7';
   font-size: 100px;
+}
+
+#powersaving-status {
+  font-family: 'digitial-7';
+  font-size: 25px;
+  padding: 4px;
+  position: absolute;
+  left:0px;
+  bottom:0px;
+  margin: 5px;
+}
+
+button {
+  color: white;
+  background: gray;
+  border: 1px solid black;
+}
+
+.selected {
+    color: #9fff80;
+    background: gray;
+}
+
+@font-face {
+    font-family: 'digitial-7';
+    src: url('./public/fonts/digital-7.ttf');
 }
 
 .low-usage {
