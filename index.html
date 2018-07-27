@@ -3,8 +3,8 @@
 <html lang="ens">
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Cabin Sketch' rel='stylesheet'>
     <link rel="stylesheet" href="thermostat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Thermostat</title>
   </head>
   <body>
@@ -19,23 +19,31 @@
   </section>
 
     <section>
-      <h2 id = 'temperature'> </h2>
-      <p>
-        <button type="button" id = 'temperature-up' style="border: 0; background: transparent">
-            <img src="./public/images/up.PNG" width="90" height=auto alt="submit" />
-        </button>
-        <button type="button" id = 'temperature-down' style="border: 0; background: transparent">
-            <img src="./public/images/down.PNG" width="90" height=auto alt="submit" />
-        </button>
-
-
-
-        <button class ="btn btn-primary btn-lg" id = 'temperature-reset'> reset </button><p></p>
-        Power Saving Mode is: <span id='powersaving-status'> on </span><p></p>
-        <button id = 'powersaving-on'> PSM on </button>
-        <button id = 'powersaving-off'> PSM off </button>
-      </p>
+      <div id="main">
+        <div class="container_row">
+          <div class="layer1">
+            <div id="screen">
+              <h2 id='temperature'></h2>
+              <div id = "psm-box">
+                <span id='powersaving-status'> PSM <i class="fa fa-circle"></i> </span>
+              </div>
+            </div>
+          </div>
+          <div class="layer2">
+            <button type="button" id = 'temperature-up' style="border: 0; background: transparent">
+                <img src="./public/images/up.PNG" width="60" height=auto alt="submit" />
+            </button>
+            <button type="button" id = 'temperature-down' style="border: 0; background: transparent">
+                <img src="./public/images/down.PNG" width="60" height=auto alt="submit" />
+            </button>
+          </div>
+        </div><br>
+          <button id = 'temperature-reset'> Reset </button>
+          <button id = 'powersaving-on' class = 'selected'> PSM on </button>
+          <button id = 'powersaving-off'> PSM off </button>
+      </div>
     </section>
+
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src = 'src/thermostat.js'></script>
