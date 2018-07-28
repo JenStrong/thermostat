@@ -20,17 +20,17 @@ $(document).ready(function(){
   $('#powersaving-on').click(function(){
     thermostat.switchPowerSavingModeOn();
     updateTemperature();
-    $(this).toggleClass( "selected" );
-    $('#powersaving-off').toggleClass("selected");
-    $('#powersaving-status').append('<i class="fa fa-circle"></i>')
+    $('#powersaving-on').addClass("selected");
+    $('#powersaving-off').removeClass("selected");
+    $('#icon').show();
   })
 
   $('#powersaving-off').click(function(){
     thermostat.switchPowerSavingModeOff();
     updateTemperature();
-    $(this).toggleClass( "selected" );
-    $('#powersaving-on').toggleClass("selected");
-    $('#powersaving-status').find('i').remove();
+    $('#powersaving-off').addClass("selected");
+    $('#powersaving-on').removeClass("selected");
+    $('#icon').hide();
   })
 
   function updateTemperature(){
