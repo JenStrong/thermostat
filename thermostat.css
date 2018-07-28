@@ -1,6 +1,17 @@
 body {
   text-align: center;
-  padding: 175px;
+  padding: 75px;
+}
+
+button {
+  color: white;
+  background: gray;
+  border: 1px solid black;
+}
+
+@font-face {
+    font-family: 'digitial-7';
+    src: url('./public/fonts/digital-7.ttf');
 }
 
 #screen {
@@ -8,7 +19,6 @@ body {
   margin: 25px;
   padding: 10px;
   background-color: #9fff80;
-  border-radius: 5px;
   border: 4px solid black;
   position:relative;
 }
@@ -35,20 +45,13 @@ body {
   margin: 5px;
 }
 
-button {
-  color: white;
-  background: gray;
-  border: 1px solid black;
+#button-rst-psm {
+  padding: 20px;
 }
 
 .selected {
     color: #9fff80;
     background: gray;
-}
-
-@font-face {
-    font-family: 'digitial-7';
-    src: url('./public/fonts/digital-7.ttf');
 }
 
 .low-usage {
