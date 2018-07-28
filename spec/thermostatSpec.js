@@ -33,6 +33,14 @@ describe ('Thermostat', function(){
     expect(thermostat.isPowerSavingModeOn()).toBe(true);
   });
 
+  it('can be reset to default temperature', function(){
+    for(var i = 0; i<6; i++){
+      thermostat.up();
+    }
+    thermostat.reset();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
   it('can turn power saving mode off', function() {
     thermostat.switchPowerSavingModeOff();
     expect(thermostat.isPowerSavingModeOn()).toBe(false);
@@ -58,6 +66,14 @@ describe ('Thermostat', function(){
       for(var i = 0; i<6; i++){
         thermostat.up();
       }
+      expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+
+    it('reduces the temperature to 25 if current temperature is above 25', function(){
+      for(var i = 0; i<6; i++){
+        thermostat.up();
+      }
+      thermostat.switchPowerSavingModeOn();
       expect(thermostat.getCurrentTemperature()).toEqual(25);
     });
   });
